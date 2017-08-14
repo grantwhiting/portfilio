@@ -1,0 +1,10 @@
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage)
+}
