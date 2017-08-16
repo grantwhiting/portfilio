@@ -6,7 +6,7 @@ $items = wp_get_nav_menu_items($menu->term_id);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grant Whiting's Website</title>
+    <title>Grant Whiting's Portfolio</title>
     <meta name="description" content="Grant Whiting's web developmeint portfolio">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">

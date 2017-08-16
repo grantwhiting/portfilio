@@ -17,7 +17,7 @@ get_header();
         <h2>About Me</h2>
         <div class="about__inner">
             <img class="portrait" src="<?php echo get_stylesheet_directory_uri(); ?>/images/portrait_new.png" alt="Grant's photo" />
-            <p>My name is Grant. Welcome to my site! I am passionate about building good-looking, dynamic, and responsive websites. I have a lot of experience building the front-end of websites ranging from smaller blogs and static content sites to large-scale, complex applications with tons of data and content. For work examples, see the projects I've been a part of below.</p>
+            <p>My name is Grant. Welcome to my portfolio! I am passionate about building elegant, dynamic, and responsive websites. I have a lot of experience building the front-end of websites ranging from smaller blogs and static content sites to large-scale, complex applications with tons of data and content. For work examples, see the projects I've been a part of below.</p>
         </div>
     </div>
 </section>

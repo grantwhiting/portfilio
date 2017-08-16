@@ -430,3 +430,16 @@ footer {
 .job-modal-trigger {
     cursor: pointer;
 }
+
+#scrollDown {
+    display: inline-block;
+    margin: 20px auto;
+    width: 15px;
+    height: 15px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
