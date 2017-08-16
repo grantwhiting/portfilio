@@ -22,7 +22,7 @@ $items = wp_get_nav_menu_items($menu->term_id);
             <div class="banner__inner">
                 <nav class="main-nav">
                     <div class="main-nav__inner">
-                        <a class="nav-link logo-link" href="#top"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Grant's Logo" /></a>
+                        <a class="nav-link logo-link" href="#top"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_new.png" alt="Grant's Logo" /></a>
                         <ul>
                             <?php foreach ($items as $item): ?>
                             <li><a class="nav-link" href="<?php echo $item->url ?>"><?php echo $item->title; ?></a></li>
@@ -31,8 +31,10 @@ $items = wp_get_nav_menu_items($menu->term_id);
                     </div>
                 </nav>
                 <div class="banner__inner--text">
+                    <img class="mobile-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_new.png" />
                     <h1>Grant Whiting<br/><span>Front-end Web Developer</span></h1>
                     <p>Based out of San Luis Obispo, CA. Specializing in custom web development.</p>
+                    <span id="scrollDown"></span>
                 </div>
             </div>
         </div>

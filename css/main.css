@@ -717,7 +717,7 @@ h1 {
   .banner:after {
     content: "";
     position: absolute;
-    background: url(../images/banner2.jpeg) no-repeat center center;
+    background: url(../images/banner2-1.jpeg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
     top: 0;
@@ -753,6 +753,9 @@ h1 {
         display: block;
         max-width: 105px;
         width: 100%; }
+        @media screen and (max-width: 768px) {
+          .banner__inner .main-nav .logo {
+            display: none; } }
       .banner__inner .main-nav .logo-link:after {
         display: none; }
       .banner__inner .main-nav ul li {
@@ -873,6 +876,15 @@ footer {
     .mobile-navbar {
       display: block; } }
 
+.mobile-logo {
+  width: 100%;
+  max-width: 100px;
+  margin: 30px auto;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .mobile-logo {
+      display: block; } }
+
 .mobile-nav {
   position: relative;
   background: rgba(0, 0, 0, 0.8);
@@ -923,7 +935,9 @@ footer {
   height: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 99999; }
+  z-index: 99999;
+  overflow-x: hidden;
+  overflow-y: auto; }
   .modal-overlay .modal {
     position: absolute;
     top: 50%;
@@ -936,6 +950,11 @@ footer {
     border-radius: 5px;
     background: #fff;
     padding: 20px; }
+    @media screen and (max-width: 540px) {
+      .modal-overlay .modal {
+        max-height: 435px;
+        height: 100%;
+        overflow: auto; } }
     .modal-overlay .modal__title {
       margin-bottom: 15px; }
     .modal-overlay .modal__img {
@@ -946,9 +965,8 @@ footer {
       margin-top: 15px;
       display: inline-block; }
     .modal-overlay .modal__close {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
+      float: right;
+      margin-top: 9px;
       border: 1px solid #000;
       text-align: center;
       border-radius: 5px;

@@ -13,7 +13,7 @@ $items = wp_get_nav_menu_items($menu->term_id);
 <div class="mobile-nav">
 <ul class="mobile-nav__inner">
     <?php foreach ($items as $item): ?>
-    <li><a class="nav-link" href="<?php echo $item->url ?>"><?php echo $item->title; ?></a></li>
+    <li><a class="mobile-nav-link nav-link" href="<?php echo $item->url ?>"><?php echo $item->title; ?></a></li>
     <?php endforeach; ?>
 </ul>
 </div>

@@ -81,7 +81,7 @@ h1 {
     &:after {
         content: "";
         position: absolute;
-        background: url(../images/banner2.jpeg) no-repeat center center;
+        background: url(../images/banner2-1.jpeg) no-repeat center center;
         background-attachment: fixed;
         background-size: cover;
         top: 0;
@@ -120,6 +120,10 @@ h1 {
                 display: block;
                 max-width: 105px;
                 width: 100%;
+
+                @media screen and (max-width: $medium) {
+                  display: none;
+                }
             }
 
             .logo-link:after {
@@ -284,6 +288,17 @@ footer {
     }
 }
 
+.mobile-logo {
+  width: 100%;
+  max-width: 100px;
+  margin: 30px auto;
+  display: none;
+
+  @media screen and (max-width: $medium) {
+    display: block;
+  }
+}
+
 .mobile-nav {
     position: relative;
     background: rgba(0, 0, 0, 0.8);
@@ -353,6 +368,8 @@ footer {
     position: relative;
     background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     .modal {
         position: absolute;
@@ -366,6 +383,12 @@ footer {
         border-radius: 5px;
         background: #fff;
         padding: 20px;
+
+        @media screen and (max-width: $small) {
+          max-height: 435px;
+          height: 100%;
+          overflow: auto;
+        }
 
         &__title {
             margin-bottom: 15px;
@@ -385,9 +408,8 @@ footer {
         }
 
         &__close {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+            float: right;
+            margin-top: 9px;
             border: 1px solid #000;
             text-align: center;
             border-radius: 5px;

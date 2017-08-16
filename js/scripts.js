@@ -3,6 +3,12 @@ $(function() {
         $(this).toggleClass("is-active");
 
         $(".mobile-nav").toggleClass("open");
+
+        if ($(".mobile-nav").hasClass("open")) {
+            $("body").addClass("no-scroll");
+        } else {
+            $("body").removeClass("no-scroll");
+        }
     });
 
     $(".job-modal-trigger").each(function() {
@@ -21,15 +27,18 @@ $(function() {
             $modalImg.attr("src", $img.attr("src"));
             $modalBlurb.text($blurb);
             $modalUrl.attr("href", $url);
+            $("body").addClass("no-scroll");
         });
     });
 
     $(".modal-overlay").click(function(e) {
         $(this).fadeOut("fast");
+        $("body").removeClass("no-scroll");
     });
 
     $(".modal__close").click(function() {
         $(".modal-overlay").fadeOut("fast");
+        $("body").removeClass("no-scroll");
     });
 
     $(".modal-overlay > div").click(function(e) {
@@ -44,12 +53,18 @@ $(function() {
         }, 500);
     });
 
+    $("#scrollDown").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top
+        }, 500);
+    });
+
     var $scroll = $(this).scrollTop();
     if ($scroll >= 300) {
         $(".main-nav").addClass("fixed-nav");
     }
 
-    $(".nav-link").each(function() {
+    $(".mobile-nav-link").each(function() {
         $(this).click(function() {
             $(".hamburger").click();
         });
@@ -69,4 +84,5 @@ $(function() {
         }
         lastScrollTop = $scroll;
     });
+
 });
